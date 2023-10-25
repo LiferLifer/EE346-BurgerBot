@@ -30,7 +30,6 @@ def callback(data):
     rospy.loginfo("Range_min: %.2f m" % min)    
     
 if __name__ == '__main__':
-    range_ref = 0.2
     rospy.init_node('scan_subscribe', anonymous=True)
     rospy.Subscriber('/scan', LaserScan, callback, queue_size=10)
     rospy.spin()
